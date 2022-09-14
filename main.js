@@ -56,7 +56,7 @@ for (let i = 0; i < dataFile.applicants.length; i++) {
     scoredApplicants.Applicant.push({ name: dataFile.applicants[i].name, score: compatibililty.toFixed(2) });
 
     let jsonString = JSON.stringify(scoredApplicants, null, 2);
-    //reading output on individual file
+    //reading output in individual file
     fs.writeFileSync('./output.json', jsonString, error => {
         if (error) {
             console.log('Please recheck work.', error)
